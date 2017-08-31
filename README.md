@@ -48,6 +48,9 @@ Good luck and work hard!
 
 # Technical Requirements - Front-end
 
+* All views need to check if the user is authenticated on mounting. If a user is not authenticated, navigate them back to the auth view. If a user is authenticated on the auth view, navigate them to the dashboard view.
+  * The back-end technical requirements will help make sense of this.
+
 ## Auth View
 
 * User can login/register through `auth0`.
@@ -115,19 +118,15 @@ Good luck and work hard!
 
 ### Authorization Endpoints
 
-* POST - `/api/auth/login` - Sets the user information on the session.
-  * On success return a status of 200 and the user object.
-  * A user object should have the following properties:
-    * `id` - This is the `UserId` you are using for your database.
-    * `username` - This is the `username` associated with the `UserId`.
-  * On failure return a status of 500.
-* POST - `/api/auth/register` - Registers a user to the database. Sets the user information on the session.
-  * On success return a status of 200 and the user object.
-  * A user object should have the following properties:
-    * `id` - This is the `UserId` you are using for your database.
-    * `username` - This is the `username` associated with the `UserId`.
-  * On failure return a status of 500.
-* POST - `/api/auth/logout` - Destroys the session. Sends a status of 200.
+* GET - `/api/auth/login` - Invokes the authenticate method on passport.
+  * Should redirect to `/api/auth/setUser` on success.
+  * Should redirect to `/api/auth/login` on failure.
+* GET - `/api/auth/setUser` - Sets the user information on the session and then redirect the user back to the dashboard view.
+* GET - `/api/auth/authenticated` - Checks for the user object on session.
+  * Sends a status of 200 and the user object on if it is on session.
+  * Sends a status of 200 and `false` if it is not on session.
+    * You can check for `false` on the front-end if a user is not authenticated and then route them back to the auth view.
+* POST - `/api/auth/logout` - Destroys the session and sends a status of 200.
 
 ### Properties Endpoints
 
