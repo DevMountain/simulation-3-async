@@ -30,7 +30,7 @@ Good luck and work hard!
 
 <img src="https://github.com/DevMountain/simulation-3/blob/master/views/dashboard-no-recommended.png" />
 
-<img src="https://github.com/DevMountain/simulation-2/blob/master/views/dashboard-recommended-gender.png" />
+<img src="https://github.com/DevMountain/simulation-3/blob/master/views/dashboard-recommended-gender.png" />
 
 ## Profile View
 
