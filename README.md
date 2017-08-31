@@ -50,49 +50,42 @@ Good luck and work hard!
 
 ## Auth View
 
-* User can login into their account.
-* User can register for an account.
-* User should be navigated to the Dashboard View on a successful login or successful registration.
+* User can login/register through `auth0`.
 
 ## Dashboard View
 
-* User can view a listing of all their properties. 
-* User can filter their properties by "desired rent".
-* User can reset an applied filter to see a list of all their properties again.
-* User can add a new property.
-  * User should be navigated to the Wizard View when attempting to create a new property.
+* User can navigate to search view or profile view from this view.
+* User can see recommended friends based on profile attributes.
+* User should not appear in the recommended friends area.
 * User can logout.
-  * User should be navigated to the Auth View.
+  * User should be navigated back to the Auth View when logging out.
 
-## Wizard View
+## Profile View
 
-* User should be able to see which step they are on, which steps they have completed, and how many steps are left at all times. This concept is shown in the screenshots above. 
-* User input should be remembered across all steps. 
-  * Example: If a user inputs information on step 1, navigates to step 2, and then navigates back to step 1: the user's input should populate in the input fields.
-  * It is acceptable if user information is lost on refresh.
-* User can click cancel on any step to cancel the creation wizard and be navigated back to the Dashboard View.
-* User can navigate to the previous or next step, if available, on all steps.
-  * For example: Step 1 should not show a previous step button since it is the first step. It should however show a next step button.
-* User can logout on any step.
-  * User should be navigated to the Auth View.
-* Step 1
-  * User can set a property's name and description.
-* Step 2
-  * User can set a property's address, city, state, and zip code.
-* Step 3
-  * User can set a property's image using a URL.
-  * User can see a preview of the image.
-    * The image cannot break out of the preview container if the image is bigger.
-    * The preview container's size should remain static.
-* Step 4
-  * User can set a property's loan and mortgage amount.
-* Step 5
-  * User can set a property's desired rent.
-  * User should be able to see a recommend rent that we calculate for them.
-    * The recommend rent we provide should be the result of the monthly mortage + 25%.
-      * For example: The recommend rent for a monthly mortgage of $500 is $625.
-  * User can complete the wizard process.
-    * User should be navigated back to the Dashboard View and see the newly created property in their property list.
+* User can update their first name.
+  * User should be able to type in an input field.
+* User can update their last name.
+  * User should be able to type in an input field.
+* User can update their gender.
+  * User should be able to select from a select box.
+* User can update their hair color.
+  * User should be able to select from a select box.
+* User can update their eye color.
+  * User should be able to select from a select box.
+* User can update their hobby.
+  * User should be able to select from a select box.
+* User can update their birth day.
+  * User should be able to select from a select box.
+* User can update their birth month.
+  * User should be able to select from a select box.
+* User can update their birth year.
+  * User should be able to select from a select box.
+* User can click cancel to revert any un-updated changes.
+* User can navigate to dashboard view or search view.
+* User can logout.
+  * User should be navigated back to the Auth View when logging out.
+
+## Search View
 
 # Technical Requirements - Back-end
 
