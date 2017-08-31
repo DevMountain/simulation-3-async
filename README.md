@@ -140,8 +140,36 @@ Good luck and work hard!
 
 ### User Endpoints
 
+* PATCH - `/api/user/patch/:id` - Updates a user's attribute(s).
+  * Sends a status of 200 and the updated user object.
+* GET - `/api/user/list` - Returns a list of 24 users.
+  * This endpoint should count how many users there are, not including the logged in user.
+  * This endpoint should calculate how many available pages there are for pagination.
+    * Hint: Total user count. 24 users per page.
+  * This endpoint should handle the pagination of users.
+    * Hint: Query offsets and limits.
+  * Sends a status of 200 with the user count, number of pagination pages, and 24 user objects.
+* GET - `/api/user/search` - Return all users that meet the search criteria.
+  * Sends a status of 200 and all the users that meet the criteria.
+
 ### Recommended Endpoints
 
+* POST - `/api/recommended` - Return a list of user's with the same property ( first name, hobby, etc..).
+  * Sends a status of 200 and a list of user objects.
+  * The logged in user shouldn't appear in this list.
+* POST - `/api/recommended/add` - Adds friend then updates recommended list.
+  * When a user gets added, that user should no longer appear in the recommended area until that user is unfriended.
+  * Sends a status of 200 and an updated list of user objects.
+    * For example: If recommendations are being shown off of the same first name, the endpoint should re-run the query to find all recommended users with the same first name again. 
 
+## Contributions
 
+If you see a problem or a typo, please fork, make the necessary changes, and create a pull request so we can review your changes and merge them into the master repo and branch.
 
+## Copyright
+
+© DevMountain LLC, 2017. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.
+
+<p align="center">
+<img src="https://devmounta.in/img/logowhiteblue.png" width="250">
+</p>
