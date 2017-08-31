@@ -124,9 +124,9 @@ Good luck and work hard!
 * GET - `/api/auth/setUser` - Sets the user information on the session.
   * The endpoint should then redirect the user back to the dashboard view.
 * GET - `/api/auth/authenticated` - Checks for the user object on session.
-  * Sends a status of 200 and the user object on if it is on session.
+  * Sends a status of 200 and the user object if it is on session.
   * Sends a status of 200 and `false` if it is not on session.
-    * You can check for `false` on the front-end if a user is not authenticated and then route them back to the auth view.
+    * You can check for `false` on the front-end and then route them back to the auth view.
 * POST - `/api/auth/logout` - Destroys the session and sends a status of 200.
 
 ### Properties Endpoints
