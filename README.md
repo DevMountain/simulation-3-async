@@ -56,6 +56,7 @@ Good luck and work hard!
 
 * User can navigate to search view or profile view from this view.
 * User can see recommended friends based on profile attributes.
+  * The container for recommended friends should have overflow for scrolling large results.
 * User should not appear in the recommended friends area.
 * User can logout.
   * User should be navigated back to the Auth View when logging out.
@@ -87,15 +88,28 @@ Good luck and work hard!
 
 ## Search View
 
+* User can navigate to dashboard view or search view.
+* User can logout.
+  * User should be navigated back to the Auth View when logging out.
+* User should see a list of friends / people to add as friends.
+  * The container for these users should limit to 24.
+  * Pagination should be used to navigate between pages of users.
+* User can apply a filter by first or last name.
+* User can reset an applied filter to get the entire list of users again.
+
 # Technical Requirements - Back-end
 
 * The back-end should be created using express.
 * Massive should be used to establish a connection to your database.
 * Express.static should be used to serve your production-ready front-end files.
-* Authorization middleware should be used to make sure a user is logged in before modifying properties in any way.
-  * If the middleware detects a user is not logged in, the back end should send a status of 403.
-  * If the middleware detects a user is logged in, the back end should send the request to the final endpoint.
 * Express sessions should be used to keep track of logged in users.
+* Passport should be used with passport sessions.
+* In passport's `serializeUser` method:
+  * Take the user's `id`, `first` name, and `last` name.
+  * If there is no first or last name, default them with empty strings `''`.
+  * Add another property called `picture` and use `https://robohash.org/me` as its value. This will give new users a robot picture.
+* In passport's `deserializeUser` method:
+  * Add the user to the database if they don't exist already.
 
 ## Endpoints
 
