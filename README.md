@@ -121,7 +121,8 @@ Good luck and work hard!
 * GET - `/api/auth/login` - Invokes the authenticate method on passport.
   * Should redirect to `/api/auth/setUser` on success.
   * Should redirect to `/api/auth/login` on failure.
-* GET - `/api/auth/setUser` - Sets the user information on the session and then redirect the user back to the dashboard view.
+* GET - `/api/auth/setUser` - Sets the user information on the session.
+  * The endpoint should then redirect the user back to the dashboard view.
 * GET - `/api/auth/authenticated` - Checks for the user object on session.
   * Sends a status of 200 and the user object on if it is on session.
   * Sends a status of 200 and `false` if it is not on session.
