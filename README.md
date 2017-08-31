@@ -16,35 +16,35 @@ Good luck and work hard!
 
 # Color Palette & Font
 
-<img src="https://github.com/DevMountain/simulation-2/blob/master/assets/colors.png" />
+<img src="https://github.com/DevMountain/simulation-3/blob/master/assets/style-guide.png" />
 
 <b><a href="https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans">Google Font - Open Sans</a></b>
-
-The dashboard view uses a linear gradient as its background: `linear-gradient(to bottom, #e2f3ea, #ffffff);`
 
 # Application Design
 
 ## Auth View
 
-<img src="https://github.com/DevMountain/simulation-2/blob/master/views/auth.png" />
+<img src="https://github.com/DevMountain/simulation-3/blob/master/views/auth.png" />
 
-## Dashboard View
+## Dashboard View ( with and without recommendations )
 
-<img src="https://github.com/DevMountain/simulation-2/blob/master/views/dashboard.png" />
+<img src="https://github.com/DevMountain/simulation-3/blob/master/views/dashboard-no-recommended.png" />
 
-<img src="https://github.com/DevMountain/simulation-2/blob/master/views/filter.png" />
+<img src="https://github.com/DevMountain/simulation-2/blob/master/views/dashboard-recommended-gender.png" />
 
-## Wizard View - Steps 1-5
+## Profile View
 
-<img src="https://github.com/DevMountain/simulation-2/blob/master/views/wizard1.png" />
+<img src="https://github.com/DevMountain/simulation-3/blob/master/views/profile.png" />
 
-<img src="https://github.com/DevMountain/simulation-2/blob/master/views/wizard2.png" />
+## Search View
 
-<img src="https://github.com/DevMountain/simulation-2/blob/master/views/wizard3.png" />
+<img src="https://github.com/DevMountain/simulation-3/blob/master/views/search-no-filter-top.png" />
 
-<img src="https://github.com/DevMountain/simulation-2/blob/master/views/wizard4.png" />
+<img src="https://github.com/DevMountain/simulation-3/blob/master/views/search-no-filter-bottom.png" />
 
-<img src="https://github.com/DevMountain/simulation-2/blob/master/views/wizard5.png" />
+<img src="https://github.com/DevMountain/simulation-3/blob/master/views/search-with-friends.png" />
+
+<img src="https://github.com/DevMountain/simulation-3/blob/master/views/search-filter.png" />
 
 # Technical Requirements - Front-end
 
