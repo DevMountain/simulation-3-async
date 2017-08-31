@@ -131,6 +131,13 @@ Good luck and work hard!
 
 ### Friend Endpoints
 
+* GET - `/api/friend/list` - Lists all friends of the logged in user.
+  * Sends a status of 200 and a list of user IDs that are friends of the logged in user.
+* POST - `/api/friend/add` - Adds a friend to the logged in user's friend list.
+  * Sends a status of 200 with the updated list of user IDs that are friends of the logged in user.
+* POST - `/api/friend/remove` - Removes a friend from the logged in user's friend list.
+  * Sends a status of 200 with the updated list of user IDs that are friends of the logged in user.
+
 ### User Endpoints
 
 ### Recommended Endpoints
