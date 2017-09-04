@@ -127,8 +127,7 @@ Good luck and work hard!
   * The endpoint should then redirect the user back to the dashboard view.
 * GET - `/api/auth/authenticated` - Checks for the user object on session.
   * Sends a status of 200 and the user object if it is on session.
-  * Sends a status of 200 and `false` if it is not on session.
-    * You can check for `false` on the front-end and then route them back to the auth view.
+  * Sends a status of 403 if it is not on session.
 * POST - `/api/auth/logout` - Destroys the session and sends a status of 200.
 
 ### Friend Endpoints
