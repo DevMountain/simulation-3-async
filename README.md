@@ -88,6 +88,8 @@ Good luck and work hard!
 * User can navigate to dashboard view or search view.
 * User can logout.
   * User should be navigated back to the Auth View when logging out.
+* User should see an error message that the birthday fields are required in order to update the profile.
+  * See live example on this works.
 
 ## Search View
 
