@@ -1,1 +1,1 @@
-SELECT * FROM users WHERE authId = $1;
+SELECT * FROM sim_users WHERE authid = $1;

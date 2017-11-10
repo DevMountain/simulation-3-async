@@ -6,12 +6,13 @@ const massive = require('massive');
 const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
 
-const { dbUser, database } = require('./config').massive;
+// const { dbUser, database } = require('./config').massive;
 const { secret } = require('./config').session;
 const { domain, clientID, clientSecret } = require('./config.js').auth0;
 
 const port = 3001;
-const connectionString = `postgres://${dbUser}@localhost/${database}`; // or -> require('./config').massive
+// const connectionString = `postgres://${dbUser}@localhost/${database}`;
+const connectionString = require('./config').massive;
 
 const app = express();
 
@@ -46,12 +47,12 @@ passport.use(
 		function(accessToken, refreshToken, extraParams, profile, done) {
 			app
 				.get('db')
-				.getUserByAuthId(profile.id)
+				.getUserByAuthID(profile.id)
 				.then(response => {
 					if (!response[0]) {
 						app
 							.get('db')
-							.createUserByAuth([profile.id, profile.displayName])
+							.createUserByAuth([profile.id])
 							.then(created => {
 								console.log(created);
 								return done(null, created[0]);

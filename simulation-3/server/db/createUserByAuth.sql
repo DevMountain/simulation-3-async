@@ -1,2 +1,2 @@
-INSERT INTO users (authId, name)
-VALUES ($1, $2) RETURNING authId, name;
+INSERT INTO sim_users (authid)
+VALUES ($1) RETURNING authid;
