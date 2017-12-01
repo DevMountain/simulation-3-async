@@ -1,0 +1,51 @@
+.body_login {
+    background-image: linear-gradient(99deg, #ff70a6, #ff9770 40%, #ffd670 73%, #e9ff70);
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+    align-content: stretch;
+    height: 100%;
+    width: 100%;
+}
+
+.middle_box {
+    background-image: linear-gradient(97deg, #ff7a6e, #ff9770);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+    align-content: stretch;
+    width: 496px;
+    height: 392px; 
+    margin: 122px;
+}
+
+.logo {
+    width: 120px;
+    height: 114px;
+    margin-top: 0px;
+}
+
+.home_button {
+    border-radius: 1px;
+    background-image: radial-gradient(
+        circle at 50% -46%,#737373 , #403d39 );
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1),
+        0 1px 2px 0 rgba(0,0,0,0.2);
+    height:45px;
+    width:347px;
+    color: white;
+    border: none;
+}
+
+.home_name {
+    color: white;
+    width: 228px;
+    height: 136px;
+    font-size: 100px;
+    margin: 0px;
+}
