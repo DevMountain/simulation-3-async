@@ -1,20 +1,20 @@
 require('dotenv').config()
 const express = require('express')
-    , bodyParser = require('cors')
+    , bodyParser = require('body-parser')
     , cors = require('cors')
     , session = require('express-session')
     , passport = require('passport')
-    , Auth0Strategy = require('massive-auth0')
+    , Auth0Strategy = require('passport-auth0')
     , massive = require('massive')
 
 const app = express()
 app.use(cors())
 app.use(bodyParser.json())
 
-//invoke massive with db connection
+massive(process.env.DB_CONNECTION).then( db => {app.set ('db', db)})
 app.use(session({
     secret: process.env.SESSION_SECRET ,
-    saveUnitialized: true,
+    saveUninitialized: true,
     resave: false
 })) 
 
@@ -26,18 +26,19 @@ app.use(passport.session())
 passport.use( new Auth0Strategy({
     domain: process.env.AUTH_DOMAIN,
     clientID: process.env.AUTH_CLIENT_ID,
-    clientSECRET: process.env.AUTH_CLIENT_SECRET,
-    callbackurl: process.env.AUTH_CALLBACK,
+    clientSecret: process.env.AUTH_CLIENT_SECRET,
+    callbackURL: process.env.AUTH_CALLBACK,
 
 }, function(accessToken, refreshToken, extraParams, profile, done){
     const db = app.get('db')
     let userData = profile._json,
         auth_id = userData.user_id.split('|')[1]
+
     db.find_user([auth_id]).then( user =>{
         if (user[0]){
             return done( null, user[0].id)
         } else{
-            db.create_user([userData.picture, auth_id]).then( user =>{
+            db.create_user_by_session([userData.picture, auth_id]).then( user =>{
                 return done (null, user[0].id)
             })
         }
@@ -57,7 +58,7 @@ passport.serializeUser(function(ID, done){
 
 passport.deserializeUser(function(ID, done){
     const db = app.get('db')
-    db.find_user_by_session([ID]).then(user =>{
+    db.find_user_session([ID]).then(user =>{
         done(null,user[0])
     })
 })
@@ -66,7 +67,11 @@ passport.deserializeUser(function(ID, done){
 
 
 app.get('auth/setUser', function (req, res, next){
-    
+    if (!req.user){
+        res.status(401).send('LOGIN REQUIRED')
+    } else {
+        res.redirect('http://localhost:3000/recommended')
+    }
 })
 
 app.get('/auth/authenticated', function (req, res, next){
@@ -80,9 +85,9 @@ app.get('/auth/authenticated', function (req, res, next){
 
 app.get('/auth/logout', function(req, res, next){
     req.logout()
-    res.redirect('http://localhost:3000/#/')
+    res.redirect('http://localhost:3000/')
 })
 
 
 
-app.listen(process.env.SERVER_PORT), () => {console.log('listening very very closely on port 3005')}
+app.listen(process.env.SERVER_PORT, () => {console.log(`listening very very closely on port ${process.env.SERVER_PORT}`)})
