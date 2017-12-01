@@ -1,0 +1,1 @@
+select * from Friends where id = $1;
