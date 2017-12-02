@@ -1,0 +1,11 @@
+.App {
+  background-image: linear-gradient(99deg, #ff70a6, #ff9770 40%, #ffd670 73%, #e9ff70);
+  display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+  align-content: stretch;
+  height: 100%;
+  width: 100%;
+}
