@@ -1,9 +1,5 @@
 <img src="https://devmounta.in/img/logowhiteblue.png" width="250" align="right">
 
-# Live Example
-
-<a href="https://helo.devmountain.com/">helo.devmountain.com</a>
-
 # Project Summary
 
 This project is designed to replicate what you might receive on the job. There won't be any guided instruction on what you'll need to do. We will only provide you with design specifications and technical requirements. Your mentors have also been asked to provide only minimal guidance. They can point you in the right direction, but cannot help you code. This project is a chance for you to combine and showcase the skills you've learned so far.
@@ -16,7 +12,7 @@ Good luck and work hard!
 
 # Color Palette & Font
 
-<img src="https://github.com/DevMountain/simulation-3/blob/master/assets/style-guide.png" />
+<img src="https://github.com/DevMountain/simulation-3-async/blob/master/assets/style-guide.png" />
 
 <b><a href="https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans">Google Font - Open Sans</a></b>
 
@@ -24,27 +20,27 @@ Good luck and work hard!
 
 ## Auth View
 
-<img src="https://github.com/DevMountain/simulation-3/blob/master/views/auth.png" />
+<img src="https://github.com/DevMountain/simulation-3-async/blob/master/views/auth.png" />
 
 ## Dashboard View ( with and without recommendations )
 
-<img src="https://github.com/DevMountain/simulation-3/blob/master/views/dashboard-no-recommended.png" />
+<img src="https://github.com/DevMountain/simulation-3-async/blob/master/views/dashboard-no-recommended.png" />
 
-<img src="https://github.com/DevMountain/simulation-3/blob/master/views/dashboard-recommended-gender.png" />
+<img src="https://github.com/DevMountain/simulation-3-async/blob/master/views/dashboard-recommended-gender.png" />
 
 ## Profile View
 
-<img src="https://github.com/DevMountain/simulation-3/blob/master/views/profile.png" />
+<img src="https://github.com/DevMountain/simulation-3-async/blob/master/views/profile.png" />
 
 ## Search View
 
-<img src="https://github.com/DevMountain/simulation-3/blob/master/views/search-no-filter-top.png" />
+<img src="https://github.com/DevMountain/simulation-3-async/blob/master/views/search-no-filter-top.png" />
 
-<img src="https://github.com/DevMountain/simulation-3/blob/master/views/search-no-filter-bottom.png" />
+<img src="https://github.com/DevMountain/simulation-3-async/blob/master/views/search-no-filter-bottom.png" />
 
-<img src="https://github.com/DevMountain/simulation-3/blob/master/views/search-with-friends.png" />
+<img src="https://github.com/DevMountain/simulation-3-async/blob/master/views/search-with-friends.png" />
 
-<img src="https://github.com/DevMountain/simulation-3/blob/master/views/search-filter.png" />
+<img src="https://github.com/DevMountain/simulation-3-async/blob/master/views/search-filter.png" />
 
 # Technical Requirements - Front-end
 
